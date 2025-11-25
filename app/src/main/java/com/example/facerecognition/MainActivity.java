@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
         imageView = findViewById(R.id.imageView);
         btnDetectFaces = findViewById(R.id.btnDetectFaces);
         Button btnSmile = findViewById(R.id.btnDetectSmile);
