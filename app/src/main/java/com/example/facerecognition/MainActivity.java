@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Edge-to-edge UI
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // UI Views
+
         imageView = findViewById(R.id.imageView);
         btnDetectFaces = findViewById(R.id.btnDetectFaces);
         Button btnSmile = findViewById(R.id.btnDetectSmile);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageBitmap(testBitmap);
         originalBitmapCopy = testBitmap.copy(Bitmap.Config.ARGB_8888, true);
 
-        // Button listeners
+
         btnDetectFaces.setOnClickListener(v -> detectFaces());
         btnBlurFaces.setOnClickListener(v->blurDetectedFaces());
         btnSmile.setOnClickListener(v -> showSmileResults());
